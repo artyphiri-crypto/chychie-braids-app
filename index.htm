@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chychie Braids | Luxury Beauty Salon & Home Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-body: #fdf6f9;
+            --primary-purple: #4a2d59;
+            --purple-deep: #2f1b39;
+            --accent-pink: #d96b93;
+            --light-pink-card: #f7e8ef;
+            --card-bg: #ffffff;
+            --text-main: #2b2b2b;
+            --text-muted: #6b6b6b;
+            --border-color: #f0d5e1;
+            --shadow-subtle: 0 10px 30px rgba(74, 45, 89, 0.06);
+            --shadow-hover: 0 20px 40px rgba(74, 45, 89, 0.12);
+            --radius-main: 16px;
+            --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4, .nav-brand {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Top Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 6%;
+            background-color: rgba(253, 246, 249, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--primary-purple);
+            text-decoration: none;
+            letter-spacing: 0.3px;
+        }
+
+        .nav-brand img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-pink);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 0.95rem;
+            font-weight: 500;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-pink);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .nav-btn {
+            background-color: var(--accent-pink);
+            color: #fff;
+            padding: 0.7rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(217, 107, 147, 0.25);
+        }
+
+        .nav-btn:hover {
+            background-color: var(--primary-purple);
+            transform: translateY(-2px);
+        }
+
+        .owner-toggle-btn {
+            background-color: transparent;
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .owner-toggle-btn:hover {
+            border-color: var(--primary-purple);
+            color: var(--primary-purple);
+        }
+
+        /* Hero Section */
+        header {
+            position: relative;
+            background: linear-gradient(135deg, rgba(74, 45, 89, 0.92), rgba(217, 107, 147, 0.85)), 
+                        url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            text-align: center;
+            padding: 7rem 1.5rem 6rem;
+        }
+
+        .logo-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.5rem;
+            background: var(--card-bg);
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            border: 4px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .welcome-subtitle {
+            font-style: italic;
+            font-size: 1.15rem;
+            color: #fce8f0;
+            margin-bottom: 0.4rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        header p {
+            margin: 1rem auto 2.5rem;
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 580px;
+            font-weight: 300;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn-primary {
+            background-color: #fff;
+            color: var(--primary-purple);
+            border: none;
+            padding: 0.9rem 2.2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .hero-btn-primary:hover {
+            background-color: var(--light-pink-card);
+            transform: translateY(-2px);
+        }
+
+        .hero-btn-secondary {
+            background-color: transparent;
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            padding: 0.9rem 2.2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .hero-btn-secondary:hover {
+            background-color: #ffffff;
+            color: var(--primary-purple);
+            border-color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto 5rem;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin: 4.5rem 0 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.4rem;
+            color: var(--primary-purple);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        /* Services Grid */
+        .services-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-main);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            text-align: center;
+            padding-bottom: 1.5rem;
+            box-shadow: var(--shadow-subtle);
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--accent-pink);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .service-card h3 {
+            font-size: 1.15rem;
+            color: var(--primary-purple);
+            margin: 1.2rem 0 0.3rem 0;
+        }
+
+        .service-card p {
+            color: var(--accent-pink);
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin: 0 0 1rem 0;
+        }
+
+        .delete-service-btn {
+            background: #ffe6eb;
+            color: #d93858;
+            border: 1px solid #fcd3dd;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            font-weight: 600;
+            display: none;
+            margin: 0 auto;
+            transition: var(--transition);
+        }
+
+        .delete-service-btn:hover {
+            background: #d93858;
+            color: #fff;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            background: var(--light-pink-card);
+            border-radius: 24px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            background: var(--card-bg);
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.06);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .gallery-item-title {
+            padding: 1rem 0.8rem 0.5rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary-purple);
+        }
+
+        .delete-pic-btn {
+            background: #ffe6eb;
+            color: #d93858;
+            border: 1px solid #fcd3dd;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: none;
+            transition: var(--transition);
+        }
+
+        .delete-pic-btn:hover {
+            background: #d93858;
+            color: #fff;
+        }
+
+        /* Owner Management Dashboard */
+        #ownerPanel {
+            display: none;
+            background: var(--card-bg);
+            border: 2px dashed var(--accent-pink);
+            padding: 2rem;
+            border-radius: var(--radius-main);
+            margin-top: 2.5rem;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        #ownerPanel h4 {
+            margin-top: 0;
+            color: var(--primary-purple);
+            font-size: 1.25rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.6rem;
+        }
+
+        .owner-section-box {
+            margin-top: 1.5rem;
+            padding-top: 1.2rem;
+            border-top: 1px dashed var(--border-color);
+        }
+
+        .owner-section-box:first-of-type {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .owner-form-group {
+            margin-top: 1rem;
+        }
+
+        .owner-form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-purple);
+            margin-bottom: 0.4rem;
+        }
+
+        .owner-form-group input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            box-sizing: border-box;
+            background-color: var(--bg-body);
+            transition: var(--transition);
+        }
+
+        .owner-form-group input:focus {
+            outline: none;
+            border-color: var(--accent-pink);
+            background-color: #fff;
+            box-shadow: 0 0 0 3px rgba(217, 107, 147, 0.15);
+        }
+
+        .btn-add-pic {
+            background-color: var(--primary-purple);
+            color: #fff;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 1rem;
+            width: 100%;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(74, 45, 89, 0.2);
+        }
+
+        .btn-add-pic:hover {
+            background-color: var(--accent-pink);
+            transform: translateY(-1px);
+        }
+
+        /* Value Strip */
+        .values-strip {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 1.5rem;
+            margin: 4rem 0;
+        }
+
+        .value-box {
+            background: var(--card-bg);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border-radius: var(--radius-main);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-subtle);
+            transition: var(--transition);
+        }
+
+        .value-box:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .value-box span {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 0.6rem;
+        }
+
+        .value-box h4 {
+            margin: 0 0 0.4rem 0;
+            font-size: 1.05rem;
+            color: var(--primary-purple);
+        }
+
+        .value-box p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Booking Card Form */
+        .booking-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 3.5rem;
+            box-shadow: var(--shadow-subtle);
+            border: 1px solid var(--border-color);
+        }
+
+        .booking-card h2 {
+            text-align: center;
+            color: var(--primary-purple);
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 2.5rem;
+        }
+
+        form label {
+            display: block;
+            margin-top: 1.4rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--primary-purple);
+        }
+
+        form input, form select {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            margin-top: 0.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-size: 0.95rem;
+            background-color: #fcf9fb;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: var(--transition);
+        }
+
+        form input:focus, form select:focus {
+            outline: none;
+            border-color: var(--accent-pink);
+            background-color: #fff;
+            box-shadow: 0 0 0 3px rgba(217, 107, 147, 0.15);
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 2.5rem;
+            margin-top: 0.8rem;
+        }
+
+        .radio-group label {
+            font-weight: normal;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            cursor: pointer;
+            color: var(--text-main);
+            margin-top: 0;
+        }
+
+        #homeServiceLocationGroup {
+            display: none;
+            background: #fff5f8;
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent-pink);
+            margin-top: 1.2rem;
+            border-radius: 10px;
+            border: 1px solid #f0d5e1;
+        }
+
+        .btn-gps {
+            background-color: #fff;
+            border: 1px solid var(--border-color);
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 0.8rem;
+            color: var(--primary-purple);
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .btn-gps:hover {
+            background-color: var(--primary-purple);
+            color: #fff;
+        }
+
+        #locationStatus {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 0.4rem;
+        }
+
+        .submit-btn {
+            background: var(--primary-purple);
+            color: #fff;
+            border: none;
+            padding: 1.1rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 12px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 2.5rem;
+            transition: var(--transition);
+            letter-spacing: 0.3px;
+            box-shadow: 0 10px 25px rgba(74, 45, 89, 0.2);
+        }
+
+        .submit-btn:hover {
+            background: var(--accent-pink);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(217, 107, 147, 0.3);
+        }
+
+        /* Catalogue Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(74, 45, 89, 0.6);
+            backdrop-filter: blur(8px);
+            padding: 2rem 1rem;
+            box-sizing: border-box;
+        }
+
+        .modal-content {
+            background-color: var(--card-bg);
+            margin: auto;
+            padding: 3rem;
+            border-radius: 24px;
+            max-width: 900px;
+            position: relative;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+            border: 1px solid var(--border-color);
+        }
+
+        .close-modal {
+            color: var(--text-muted);
+            position: absolute;
+            right: 2rem;
+            top: 1.8rem;
+            font-size: 32px;
+            font-weight: 300;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--primary-purple);
+        }
+
+        .catalogue-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+            margin-top: 2rem;
+        }
+
+        .category-card {
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-main);
+            padding: 1.5rem;
+            background: #fcf9fb;
+        }
+
+        .category-card h4 {
+            color: var(--primary-purple);
+            margin-top: 0;
+            font-size: 1.15rem;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 0.6rem;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 0.7rem 0;
+            font-size: 0.9rem;
+        }
+
+        .price-item span:last-child {
+            font-weight: 700;
+            color: var(--accent-pink);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--purple-deep);
+            color: #ffffff;
+            padding: 5rem 2rem 2.5rem;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 3.5rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .footer-col h3 {
+            color: #f7e8ef;
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: #e2c5d4;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-pink);
+        }
+
+        .footer-col p {
+            color: #e2c5d4;
+            font-size: 0.95rem;
+            margin: 0.5rem 0;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            font-size: 0.85rem;
+            color: #d1b3c2;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            header h1 { font-size: 2.3rem; }
+            .booking-card { padding: 2rem; }
+            .gallery-section { padding: 1.5rem; }
+            .modal-content { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#" class="nav-brand">
+            <img src="logo.png" alt="Chychie Logo">
+            CHYCHIE BRAIDS
+        </a>
+        <ul class="nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#" onclick="openCatalogue()">Prices</a></li>
+            <li><a href="#booking">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="owner-toggle-btn" onclick="toggleOwnerMode()">🔒 Owner Mode</button>
+            <a href="#booking" class="nav-btn">Book Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Header Section -->
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Chychie Braids Logo">
+        </div>
+        <div class="welcome-subtitle">Welcome to Chychie Beauty Salon</div>
+        <h1>Healthy Hair. Beautiful You. Every Day.</h1>
+        <p>Professional braiding, hair treatments, and exquisite styling services tailored for the modern woman.</p>
+        <div class="hero-btns">
+            <a href="#booking" class="hero-btn-primary">Book Appointment</a>
+            <button class="hero-btn-secondary" onclick="openCatalogue()">Our Services & Prices</button>
+        </div>
+    </header>
+
+    <!-- Main Content Body -->
+    <div class="main-container">
+
+        <!-- Services Preview Section -->
+        <div id="services" class="section-header">
+            <h2>Our Services & Prices</h2>
+            <p>From clean knotless parts to flawless protective styling experiences.</p>
+        </div>
+
+        <!-- Dynamic Services Grid -->
+        <div class="services-preview" id="dynamicServicesGrid">
+            <!-- JavaScript populates services here -->
+        </div>
+
+        <!-- Dynamic Style Gallery Section -->
+        <div id="gallery" class="gallery-section">
+            <div class="section-header" style="margin-top:0; margin-bottom:1.5rem;">
+                <h2>Style Gallery</h2>
+                <p>Explore recent creations and client transformations</p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="dynamicGalleryGrid">
+                <!-- Javascript populates gallery items here -->
+            </div>
+
+            <!-- Owner Controls Box (Hidden by default) -->
+            <div id="ownerPanel">
+                <h4>🔒 Owner App Management Dashboard</h4>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+                    Upload photos and configure your service offerings seamlessly from your device.
+                </p>
+
+                <!-- Management for Services Section -->
+                <div class="owner-section-box">
+                    <h5 style="margin: 0 0 0.5rem 0; color: var(--primary-purple); font-size: 1rem;">1. Add Service Preview Card</h5>
+                    <div class="owner-form-group">
+                        <label for="newServiceTitle">Service Name:</label>
+                        <input type="text" id="newServiceTitle" placeholder="e.g., Knotless Braids">
+                    </div>
+                    <div class="owner-form-group">
+                        <label for="newServicePrice">Price Range / Text:</label>
+                        <input type="text" id="newServicePrice" placeholder="e.g., Mwk 15,000 - 23,000">
+                    </div>
+                    <div class="owner-form-group">
+                        <label for="serviceImageFile">Service Photo:</label>
+                        <input type="file" id="serviceImageFile" accept="image/*">
+                    </div>
+                    <button type="button" class="btn-add-pic" onclick="addNewServiceItem()">Add to Services & Prices</button>
+                </div>
+
+                <!-- Management for Gallery Section -->
+                <div class="owner-section-box">
+                    <h5 style="margin: 1.2rem 0 0.5rem 0; color: var(--primary-purple); font-size: 1rem;">2. Add Gallery Photo</h5>
+                    <div class="owner-form-group">
+                        <label for="newPicTitle">Style Title:</label>
+                        <input type="text" id="newPicTitle" placeholder="e.g., Small Knotless Waist Length">
+                    </div>
+                    <div class="owner-form-group">
+                        <label for="imageFile">Gallery Photo:</label>
+                        <input type="file" id="imageFile" accept="image/*">
+                    </div>
+                    <button type="button" class="btn-add-pic" onclick="addNewGalleryItem()">Upload to Gallery</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Value Proposition Badges -->
+        <div class="values-strip">
+            <div class="value-box">
+                <span>💎</span>
+                <h4>Professional Staff</h4>
+                <p>Experienced braiders with precision & care.</p>
+            </div>
+            <div class="value-box">
+                <span>🌿</span>
+                <h4>Quality Products</h4>
+                <p>We use premium hair and scalp care items.</p>
+            </div>
+            <div class="value-box">
+                <span>🏠</span>
+                <h4>Salon & Home Service</h4>
+                <p>Visit our studio or enjoy convenient mobile styling.</p>
+            </div>
+            <div class="value-box">
+                <span>⭐</span>
+                <h4>Client Satisfaction</h4>
+                <p>Your ultimate comfort and style is our priority.</p>
+            </div>
+        </div>
+
+        <!-- Booking Section Form -->
+        <div id="booking" class="booking-card">
+            <h2>Book Your Appointment</h2>
+            <form id="bookingForm" onsubmit="handleBooking(event)">
+                
+                <label for="clientName">Full Name:</label>
+                <input type="text" id="clientName" required placeholder="e.g. Chisomo Chinyama">
+
+                <label for="clientPhone">Phone Number (Airtel / TNM):</label>
+                <input type="tel" id="clientPhone" required placeholder="e.g. 099... / 088...">
+
+                <label for="selectedStyle">Select Style & Size:</label>
+                <select id="selectedStyle" required>
+                    <option value="">-- Choose a Style --</option>
+                    <optgroup label="Knotless Braids/Twists">
+                        <option value="Knotless Small Waist Length - Mwk 20,000">Knotless Small Waist Length (Mwk 20,000)</option>
+                        <option value="Knotless Small Butt Length - Mwk 23,000">Knotless Small Butt Length (Mwk 23,000)</option>
+                        <option value="Knotless Medium Waist Length - Mwk 18,000">Knotless Medium Waist Length (Mwk 18,000)</option>
+                        <option value="Knotless Medium Butt Length - Mwk 20,000">Knotless Medium Butt Length (Mwk 20,000)</option>
+                        <option value="Knotless Large Waist Length - Mwk 15,000">Knotless Large Waist Length (Mwk 15,000)</option>
+                        <option value="Knotless Large Butt Length - Mwk 17,000">Knotless Large Butt Length (Mwk 17,000)</option>
+                    </optgroup>
+                    <optgroup label="Miracle Knots">
+                        <option value="Miracle Knots Small - Mwk 23,000">Miracle Knots Small (Mwk 23,000)</option>
+                        <option value="Miracle Knots Medium - Mwk 18,000">Miracle Knots Medium (Mwk 18,000)</option>
+                    </optgroup>
+                    <optgroup label="Mini Twists">
+                        <option value="Mini Twists Small Short - Mwk 23,000">Mini Twists Small Short (Mwk 23,000)</option>
+                        <option value="Mini Twists Small Long - Mwk 25,000">Mini Twists Small Long (Mwk 25,000)</option>
+                        <option value="Mini Twists Medium Short - Mwk 20,000">Mini Twists Medium Short (Mwk 20,000)</option>
+                        <option value="Mini Twists Medium Long - Mwk 22,000">Mini Twists Medium Long (Mwk 22,000)</option>
+                    </optgroup>
+                    <optgroup label="French Curls">
+                        <option value="French Curls Small Short - Mwk 18,000">French Curls Small Short (Mwk 18,000)</option>
+                        <option value="French Curls Small Long - Mwk 23,000">French Curls Small Long (Mwk 23,000)</option>
+                        <option value="French Curls Medium Long - Mwk 18,000">French Curls Medium Long (Mwk 18,000)</option>
+                    </optgroup>
+                    <optgroup label="Locs">
+                        <option value="Locs Installation - Mwk 25,000">Locs Installation (Mwk 25,000)</option>
+                        <option value="Locs Making Your Material - Mwk 30,000">Locs Making (Your Material) (Mwk 30,000)</option>
+                    </optgroup>
+                </select>
+
+                <label>Service Location Type:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="serviceType" value="At Salon (Lilongwe)" checked onclick="toggleHomeService(false)"> At Salon (Lilongwe)</label>
+                    <label><input type="radio" name="serviceType" value="Home Service" onclick="toggleHomeService(true)"> Home Service</label>
+                </div>
+
+                <!-- Conditional Home Service Location Field with GPS -->
+                <div id="homeServiceLocationGroup">
+                    <label for="clientLocation">Physical Address / House No. or Map Pin:</label>
+                    <input type="text" id="clientLocation" placeholder="e.g. Area 47, Sector 3, House No...">
+                    <button type="button" class="btn-gps" onclick="getLocationPin()">📍 Use My Current Live Location</button>
+                    <div id="locationStatus"></div>
+                </div>
+
+                <label for="appointmentDate">Preferred Date & Time:</label>
+                <input type="datetime-local" id="appointmentDate" required>
+
+                <label for="paymentMethod">Payment Method:</label>
+                <select id="paymentMethod" required>
+                    <option value="">-- Choose Payment Option --</option>
+                    <option value="Airtel Money">Airtel Money</option>
+                    <option value="TNM Mpamba">TNM Mpamba</option>
+                    <option value="Bank Transfer">Bank Transfer / Card</option>
+                    <option value="Cash on Service">Cash on Service</option>
+                </select>
+
+                <button type="submit" class="submit-btn">Confirm & Send Booking via WhatsApp</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Catalogue & Price List Modal -->
+    <div id="catalogueModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCatalogue()">&times;</span>
+            <div class="section-header" style="margin: 0 0 1.5rem 0;">
+                <h2>Style Price Catalogue</h2>
+                <p>Transparent pricing for all braiding styles and lengths</p>
+            </div>
+            
+            <div class="catalogue-grid">
+                <div class="category-card">
+                    <h4>Knotless Braids / Twists</h4>
+                    <p><strong>Small:</strong></p>
+                    <div class="price-item"><span>Waist length</span><span>Mwk 20,000</span></div>
+                    <div class="price-item"><span>Butt length</span><span>Mwk 23,000</span></div>
+                    <p><strong>Medium:</strong></p>
+                    <div class="price-item"><span>Waist length</span><span>Mwk 18,000</span></div>
+                    <div class="price-item"><span>Butt length</span><span>Mwk 20,000</span></div>
+                    <p><strong>Large:</strong></p>
+                    <div class="price-item"><span>Waist length</span><span>Mwk 15,000</span></div>
+                    <div class="price-item"><span>Butt length</span><span>Mwk 17,000</span></div>
+                </div>
+
+                <div class="category-card">
+                    <h4>Miracle Knots & Mini Twists</h4>
+                    <p><strong>Miracle Knots:</strong></p>
+                    <div class="price-item"><span>Small</span><span>Mwk 23,000</span></div>
+                    <div class="price-item"><span>Medium</span><span>Mwk 18,000</span></div>
+                    <p><strong>Mini Twists (Small):</strong></p>
+                    <div class="price-item"><span>Short</span><span>Mwk 23,000</span></div>
+                    <div class="price-item"><span>Long</span><span>Mwk 25,000</span></div>
+                    <p><strong>Mini Twists (Medium):</strong></p>
+                    <div class="price-item"><span>Short</span><span>Mwk 20,000</span></div>
+                    <div class="price-item"><span>Long</span><span>Mwk 22,000</span></div>
+                </div>
+
+                <div class="category-card">
+                    <h4>French Curls & Locs</h4>
+                    <p><strong>French Curls (Small):</strong></p>
+                    <div class="price-item"><span>Short</span><span>Mwk 18,000</span></div>
+                    <div class="price-item"><span>Long</span><span>Mwk 23,000</span></div>
+                    <p><strong>French Curls (Medium):</strong></p>
+                    <div class="price-item"><span>Long</span><span>Mwk 18,000</span></div>
+                    <p><strong>Locs:</strong></p>
+                    <div class="price-item"><span>Installation</span><span>Mwk 25,000</span></div>
+                    <div class="price-item"><span>Making (Your Material)</span><span>Mwk 30,000</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h3>Chychie Braids</h3>
+                <p>Where confidence blossoms through immaculate hair styling and care.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#gallery">Style Gallery</a></li>
+                    <li><a href="#" onclick="openCatalogue()">Price Catalogue</a></li>
+                    <li><a href="#booking">Book Appointment</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <p>📞 Phone/WhatsApp: 0995040542</p>
+                <p>📍 Location: Lilongwe, Malawi</p>
+                <p>🕒 Mon - Sat: 8:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Chychie Braids. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Modal Controls
+        const modal = document.getElementById('catalogueModal');
+        function openCatalogue() {
+            modal.style.display = "block";
+        }
+        function closeCatalogue() {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Home Service toggle
+        function toggleHomeService(isHome) {
+            const locationGroup = document.getElementById('homeServiceLocationGroup');
+            const locationInput = document.getElementById('clientLocation');
+            if (isHome) {
+                locationGroup.style.display = 'block';
+                locationInput.setAttribute('required', 'true');
+            } else {
+                locationGroup.style.display = 'none';
+                locationInput.removeAttribute('required');
+                document.getElementById('locationStatus').innerText = '';
+            }
+        }
+
+        // Live Geolocation feature
+        function getLocationPin() {
+            const status = document.getElementById('locationStatus');
+            const locationInput = document.getElementById('clientLocation');
+
+            if (!navigator.geolocation) {
+                status.innerText = "Geolocation is not supported by your browser.";
+                return;
+            }
+
+            status.innerText = "Locating position...";
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    const mapsLink = `https://maps.google.com/?q=${lat},${lon}`;
+                    locationInput.value = mapsLink;
+                    status.innerText = "✔ Live location captured successfully!";
+                },
+                () => {
+                    status.innerText = "Unable to retrieve location. Please type your address manually.";
+                }
+            );
+        }
+
+        // Global State & LocalStorage Management
+        let isOwnerMode = false;
+
+        function toggleOwnerMode() {
+            isOwnerMode = !isOwnerMode;
+            const panel = document.getElementById('ownerPanel');
+            const btn = document.querySelector('.owner-toggle-btn');
+            
+            if (isOwnerMode) {
+                panel.style.display = 'block';
+                btn.style.backgroundColor = 'var(--primary-purple)';
+                btn.style.color = '#fff';
+                btn.style.borderColor = 'var(--primary-purple)';
+                btn.innerText = '🔓 Owner Mode (Active)';
+            } else {
+                panel.style.display = 'none';
+                btn.style.backgroundColor = 'transparent';
+                btn.style.color = 'var(--text-muted)';
+                btn.style.borderColor = 'var(--border-color)';
+                btn.innerText = '🔒 Owner Mode';
+            }
+            renderServices();
+            renderGallery();
+        }
+
+        // --- SERVICES STORAGE & RENDERING ---
+        const defaultServices = [
+            { title: "Knotless Braids", price: "Mwk 15,000 - 23,000", url: "logo.png" },
+            { title: "Miracle Knots", price: "Mwk 18,000 - 23,000", url: "logo.png" },
+            { title: "French Curls", price: "Mwk 18,000 - 23,000", url: "logo.png" },
+            { title: "Mini Twists & Locs", price: "Mwk 20,000 - 30,000", url: "logo.png" }
+        ];
+
+        function getServicesData() {
+            const stored = localStorage.getItem('chychie_services_storage');
+            return stored ? JSON.parse(stored) : defaultServices;
+        }
+
+        function saveServicesData(data) {
+            localStorage.setItem('chychie_services_storage', JSON.stringify(data));
+        }
+
+        function renderServices() {
+            const grid = document.getElementById('dynamicServicesGrid');
+            const services = getServicesData();
+            grid.innerHTML = '';
+
+            services.forEach((item, index) => {
+                let deleteButtonHtml = isOwnerMode ? `<button class="delete-service-btn" style="display:block;" onclick="removeServiceItem(${index})">Remove Service</button>` : '';
+                grid.innerHTML += `
+                    <div class="service-card">
+                        <img src="${item.url}" alt="${item.title}" onerror="this.src='logo.png'">
+                        <h3>${item.title}</h3>
+                        <p>${item.price}</p>
+                        ${deleteButtonHtml}
+                    </div>
+                `;
+            });
+        }
+
+        function addNewServiceItem() {
+            const titleInput = document.getElementById('newServiceTitle');
+            const priceInput = document.getElementById('newServicePrice');
+            const fileInput = document.getElementById('serviceImageFile');
+
+            if (!titleInput.value || !priceInput.value) {
+                alert("Please enter both the service name and price range.");
+                return;
+            }
+            if (fileInput.files.length === 0) {
+                alert("Please select a photo for this service from your device.");
+                return;
+            }
+
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                const base64Image = e.target.result;
+                const services = getServicesData();
+                services.push({ title: titleInput.value, price: priceInput.value, url: base64Image });
+                saveServicesData(services);
+
+                titleInput.value = '';
+                priceInput.value = '';
+                fileInput.value = '';
+                renderServices();
+                alert("Service successfully added to 'Our Services & Prices'!");
+            };
+
+            reader.readAsDataURL(file);
+        }
+
+        function removeServiceItem(index) {
+            if (confirm("Are you sure you want to remove this service card?")) {
+                const services = getServicesData();
+                services.splice(index, 1);
+                saveServicesData(services);
+                renderServices();
+            }
+        }
+
+        // --- GALLERY STORAGE & RENDERING ---
+        const defaultGallery = [
+            { title: "Knotless Braids", url: "logo.png" },
+            { title: "Miracle Knots", url: "logo.png" },
+            { title: "French Curls", url: "logo.png" },
+            { title: "Mini Twists", url: "logo.png" }
+        ];
+
+        function getGalleryData() {
+            const stored = localStorage.getItem('chychie_gallery_storage');
+            return stored ? JSON.parse(stored) : defaultGallery;
+        }
+
+        function saveGalleryData(data) {
+            localStorage.setItem('chychie_gallery_storage', JSON.stringify(data));
+        }
+
+        function renderGallery() {
+            const grid = document.getElementById('dynamicGalleryGrid');
+            const gallery = getGalleryData();
+            grid.innerHTML = '';
+
+            gallery.forEach((item, index) => {
+                let deleteBtnHtml = isOwnerMode ? `<button class="delete-pic-btn" style="display:inline-block;" onclick="removeGalleryItem(${index})">Remove Photo</button>` : '';
+                grid.innerHTML += `
+                    <div class="gallery-item">
+                        <img src="${item.url}" alt="${item.title}" onerror="this.src='logo.png'">
+                        <div class="gallery-item-title">${item.title}</div>
+                        ${deleteBtnHtml}
+                    </div>
+                `;
+            });
+        }
+
+        function addNewGalleryItem() {
+            const titleInput = document.getElementById('newPicTitle');
+            const fileInput = document.getElementById('imageFile');
+
+            if (!titleInput.value) {
+                alert("Please enter a title for the hairstyle.");
+                return;
+            }
+            if (fileInput.files.length === 0) {
+                alert("Please select a photo from your device.");
+                return;
+            }
+
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                const base64Image = e.target.result;
+                const gallery = getGalleryData();
+                gallery.push({ title: titleInput.value, url: base64Image });
+                saveGalleryData(gallery);
+
+                titleInput.value = '';
+                fileInput.value = '';
+                renderGallery();
+                alert("Photo successfully added to the live gallery!");
+            };
+
+            reader.readAsDataURL(file);
+        }
+
+        function removeGalleryItem(index) {
+            if (confirm("Are you sure you want to remove this photo from the gallery?")) {
+                const gallery = getGalleryData();
+                gallery.splice(index, 1);
+                saveGalleryData(gallery);
+                renderGallery();
+            }
+        }
+
+        window.onload = function() {
+            renderServices();
+            renderGallery();
+        };
+
+        // Form Submission & WhatsApp Redirect
+        function handleBooking(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('clientName').value;
+            const phone = document.getElementById('clientPhone').value;
+            const style = document.getElementById('selectedStyle').value;
+            const serviceType = document.querySelector('input[name="serviceType"]:checked').value;
+            const location = document.getElementById('clientLocation').value;
+            const date = document.getElementById('appointmentDate').value;
+            const payment = document.getElementById('paymentMethod').value;
+
+            let message = `Hello Chychie Braids, I would like to book an appointment:%0A` +
+                          `- *Name:* ${name}%0A` +
+                          `- *Phone:* ${phone}%0A` +
+                          `- *Style:* ${style}%0A` +
+                          `- *Service Type:* ${serviceType}%0A`;
+
+            if (serviceType === 'Home Service') {
+                message += `- *Location/Map:* ${location}%0A`;
+            }
+
+            message += `- *Date & Time:* ${date}%0A` +
+                       `- *Payment Method:* ${payment}`;
+
+            const salonWhatsAppNumber = "265995040542";
+            const whatsappURL = `https://wa.me/${salonWhatsAppNumber}?text=${message}`;
+
+            window.open(whatsappURL, '_blank');
+        }
+    </script>
+</body>
+</html>
