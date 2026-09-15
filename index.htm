@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chychie Braids | Luxury Beauty Salon & Home Services</title>
+    <title>Chychie Braids | Beauty Salon & Home Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-body: #fdf6f9;
-            --primary-purple: #4a2d59;
-            --purple-deep: #2f1b39;
-            --accent-pink: #d96b93;
-            --light-pink-card: #f7e8ef;
+            --bg-body: #fdf2f6;
+            --primary-purple: #2c163b;
+            --accent-pink: #d1517f;
+            --light-pink-card: #f9e2ec;
             --card-bg: #ffffff;
-            --text-main: #2b2b2b;
-            --text-muted: #6b6b6b;
-            --border-color: #f0d5e1;
-            --shadow-subtle: 0 10px 30px rgba(74, 45, 89, 0.06);
-            --shadow-hover: 0 20px 40px rgba(74, 45, 89, 0.12);
-            --radius-main: 16px;
+            --text-main: #333333;
+            --text-muted: #666666;
+            --border-color: #f0cfe0;
+            --shadow-subtle: 0 10px 30px rgba(44, 22, 59, 0.05);
+            --radius-main: 20px;
             --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
@@ -28,21 +26,20 @@
             color: var(--text-main);
             margin: 0;
             padding: 0;
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
         h1, h2, h3, h4, .nav-brand {
             font-family: 'Playfair Display', serif;
         }
 
-        /* Top Navigation Bar */
+        /* Navigation Bar */
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 6%;
-            background-color: rgba(253, 246, 249, 0.92);
-            backdrop-filter: blur(12px);
+            padding: 1rem 6%;
+            background-color: #ffffff;
             border-bottom: 1px solid var(--border-color);
             position: sticky;
             top: 0;
@@ -52,17 +49,16 @@
         .nav-brand {
             display: flex;
             align-items: center;
-            gap: 0.9rem;
+            gap: 0.8rem;
             font-weight: 700;
             font-size: 1.25rem;
             color: var(--primary-purple);
             text-decoration: none;
-            letter-spacing: 0.3px;
         }
 
         .nav-brand img {
-            width: 44px;
-            height: 44px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid var(--accent-pink);
@@ -70,11 +66,11 @@
 
         .nav-links {
             display: flex;
-            gap: 2.2rem;
+            gap: 2rem;
             list-style: none;
             margin: 0;
             padding: 0;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: 500;
         }
 
@@ -89,30 +85,22 @@
             color: var(--accent-pink);
         }
 
-        .nav-actions {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
         .nav-btn {
             background-color: var(--accent-pink);
             color: #fff;
-            padding: 0.7rem 1.5rem;
+            padding: 0.6rem 1.4rem;
             border-radius: 30px;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 600;
             transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(217, 107, 147, 0.25);
+            box-shadow: 0 4px 15px rgba(209, 81, 127, 0.25);
         }
 
         .nav-btn:hover {
             background-color: var(--primary-purple);
-            transform: translateY(-2px);
         }
 
-        /* Mobile Menu Toggle Button */
         .menu-toggle {
             display: none;
             background: none;
@@ -122,96 +110,73 @@
             cursor: pointer;
         }
 
-        /* Hero Section */
+        /* Hero Header Section */
         header {
-            position: relative;
-            background: linear-gradient(135deg, rgba(74, 45, 89, 0.92), rgba(217, 107, 147, 0.85)), 
-                        url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            background-position: center;
-            color: #ffffff;
-            text-align: center;
-            padding: 7rem 1.5rem 6rem;
-        }
-
-        .logo-container {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 1.5rem;
-            background: var(--card-bg);
-            border-radius: 50%;
-            overflow: hidden;
             display: flex;
             align-items: center;
-            justify-content: center;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
-            border: 4px solid rgba(255, 255, 255, 0.3);
+            justify-content: space-between;
+            padding: 5rem 6%;
+            background: linear-gradient(135deg, #fdf2f6 50%, #f4d3e2 100%);
+            gap: 2rem;
         }
 
-        .logo-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
         }
 
         .welcome-subtitle {
             font-style: italic;
             font-size: 1.15rem;
-            color: #fce8f0;
-            margin-bottom: 0.4rem;
-            font-family: 'Playfair Display', serif;
+            color: var(--accent-pink);
+            margin-bottom: 0.3rem;
         }
 
         header h1 {
             margin: 0;
-            font-size: 3.2rem;
+            font-size: 3.5rem;
             font-weight: 700;
-            letter-spacing: -0.5px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            color: var(--primary-purple);
+            line-height: 1.15;
         }
 
         header p {
-            margin: 1rem auto 2.5rem;
-            font-size: 1.1rem;
-            opacity: 0.95;
-            max-width: 580px;
-            font-weight: 300;
+            margin: 1.2rem 0 2rem;
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            font-weight: 400;
         }
 
         .hero-btns {
             display: flex;
-            justify-content: center;
-            gap: 1.2rem;
+            gap: 1rem;
             flex-wrap: wrap;
         }
 
         .hero-btn-primary {
-            background-color: #fff;
-            color: var(--primary-purple);
+            background-color: var(--accent-pink);
+            color: #fff;
             border: none;
-            padding: 0.9rem 2.2rem;
-            font-size: 0.95rem;
+            padding: 0.8rem 2rem;
+            font-size: 0.9rem;
             font-weight: 600;
             border-radius: 30px;
             cursor: pointer;
             transition: var(--transition);
             text-decoration: none;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 20px rgba(209, 81, 127, 0.3);
         }
 
         .hero-btn-primary:hover {
-            background-color: var(--light-pink-card);
-            transform: translateY(-2px);
+            background-color: var(--primary-purple);
         }
 
         .hero-btn-secondary {
             background-color: transparent;
-            color: #ffffff;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            padding: 0.9rem 2.2rem;
-            font-size: 0.95rem;
+            color: var(--primary-purple);
+            border: 2px solid var(--border-color);
+            padding: 0.8rem 2rem;
+            font-size: 0.9rem;
             font-weight: 600;
             border-radius: 30px;
             cursor: pointer;
@@ -219,116 +184,184 @@
         }
 
         .hero-btn-secondary:hover {
-            background-color: #ffffff;
-            color: var(--primary-purple);
-            border-color: #ffffff;
-            transform: translateY(-2px);
+            border-color: var(--accent-pink);
+            color: var(--accent-pink);
+        }
+
+        .hero-image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            max-width: 420px;
+            height: 420px;
+            border-radius: 50% 50% 30% 30%;
+            object-fit: cover;
+            border: 6px solid #ffffff;
+            box-shadow: 0 20px 40px rgba(44, 22, 59, 0.1);
         }
 
         /* Main Container */
         .main-container {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto 5rem;
             padding: 0 2rem;
         }
 
-        /* Value Strip */
+        /* Services Grid Section */
+        .section-title {
+            text-align: center;
+            color: var(--primary-purple);
+            font-size: 2.2rem;
+            margin: 4rem 0 2.5rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border-radius: var(--radius-main);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-subtle);
+            text-align: center;
+            padding-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(44, 22, 59, 0.08);
+        }
+
+        .service-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .service-card h3 {
+            color: var(--primary-purple);
+            margin: 1rem 0 0.4rem;
+            font-size: 1.15rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            padding: 0 1rem;
+            margin-bottom: 1.2rem;
+            min-height: 40px;
+        }
+
+        .price-tag {
+            background-color: var(--accent-pink);
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+
+        /* Value Badges Strip */
         .values-strip {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-            gap: 1.5rem;
-            margin: 4rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
+            margin: 3rem 0;
         }
 
         .value-box {
-            background: var(--card-bg);
-            padding: 2rem 1.5rem;
+            background: #ffffff;
+            padding: 1.5rem;
             text-align: center;
             border-radius: var(--radius-main);
             border: 1px solid var(--border-color);
             box-shadow: var(--shadow-subtle);
-            transition: var(--transition);
-        }
-
-        .value-box:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-hover);
         }
 
         .value-box span {
-            font-size: 2rem;
+            font-size: 1.8rem;
             display: block;
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.5rem;
         }
 
         .value-box h4 {
-            margin: 0 0 0.4rem 0;
-            font-size: 1.05rem;
+            margin: 0 0 0.3rem 0;
+            font-size: 1rem;
             color: var(--primary-purple);
         }
 
         .value-box p {
             margin: 0;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
         }
 
-        /* Booking Card Form */
+        /* Booking Form Card */
         .booking-card {
             background: var(--card-bg);
             border-radius: 24px;
-            padding: 3.5rem;
+            padding: 3rem;
             box-shadow: var(--shadow-subtle);
             border: 1px solid var(--border-color);
+            margin-top: 3rem;
         }
 
         .booking-card h2 {
             text-align: center;
             color: var(--primary-purple);
-            font-size: 2.2rem;
+            font-size: 2rem;
             margin-top: 0;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
         }
 
         form label {
             display: block;
-            margin-top: 1.4rem;
+            margin-top: 1.2rem;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--primary-purple);
         }
 
         form input, form select {
             width: 100%;
-            padding: 0.9rem 1rem;
-            margin-top: 0.5rem;
+            padding: 0.85rem 1rem;
+            margin-top: 0.4rem;
             border: 1px solid var(--border-color);
             border-radius: 10px;
             box-sizing: border-box;
-            font-size: 0.95rem;
-            background-color: #fcf9fb;
+            font-size: 0.9rem;
+            background-color: #fdf8fb;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            transition: var(--transition);
         }
 
         form input:focus, form select:focus {
             outline: none;
             border-color: var(--accent-pink);
             background-color: #fff;
-            box-shadow: 0 0 0 3px rgba(217, 107, 147, 0.15);
         }
 
         .radio-group {
             display: flex;
-            gap: 2.5rem;
-            margin-top: 0.8rem;
+            gap: 2rem;
+            margin-top: 0.6rem;
         }
 
         .radio-group label {
             font-weight: normal;
             display: flex;
             align-items: center;
-            gap: 0.6rem;
+            gap: 0.5rem;
             cursor: pointer;
             color: var(--text-main);
             margin-top: 0;
@@ -336,61 +369,42 @@
 
         #homeServiceLocationGroup {
             display: none;
-            background: #fff5f8;
-            padding: 1.5rem;
+            background: #fdf5f9;
+            padding: 1.2rem;
             border-left: 4px solid var(--accent-pink);
-            margin-top: 1.2rem;
-            border-radius: 10px;
-            border: 1px solid #f0d5e1;
+            margin-top: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
         }
 
         .btn-gps {
             background-color: #fff;
             border: 1px solid var(--border-color);
-            padding: 0.6rem 1rem;
-            border-radius: 8px;
-            font-size: 0.85rem;
+            padding: 0.5rem 0.9rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
             cursor: pointer;
             font-weight: 600;
-            margin-top: 0.8rem;
+            margin-top: 0.6rem;
             color: var(--primary-purple);
-            transition: var(--transition);
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .btn-gps:hover {
-            background-color: var(--primary-purple);
-            color: #fff;
-        }
-
-        #locationStatus {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-top: 0.4rem;
         }
 
         .submit-btn {
             background: var(--primary-purple);
             color: #fff;
             border: none;
-            padding: 1.1rem;
-            font-size: 1rem;
+            padding: 1rem;
+            font-size: 0.95rem;
             font-weight: bold;
             border-radius: 12px;
             cursor: pointer;
             width: 100%;
-            margin-top: 2.5rem;
+            margin-top: 2rem;
             transition: var(--transition);
-            letter-spacing: 0.3px;
-            box-shadow: 0 10px 25px rgba(74, 45, 89, 0.2);
         }
 
         .submit-btn:hover {
             background: var(--accent-pink);
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(217, 107, 147, 0.3);
         }
 
         /* Catalogue Modal */
@@ -403,8 +417,8 @@
             width: 100%;
             height: 100%;
             overflow: auto;
-            background-color: rgba(74, 45, 89, 0.6);
-            backdrop-filter: blur(8px);
+            background-color: rgba(44, 22, 59, 0.6);
+            backdrop-filter: blur(6px);
             padding: 2rem 1rem;
             box-sizing: border-box;
         }
@@ -412,57 +426,50 @@
         .modal-content {
             background-color: var(--card-bg);
             margin: auto;
-            padding: 3rem;
+            padding: 2.5rem;
             border-radius: 24px;
-            max-width: 900px;
+            max-width: 850px;
             position: relative;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
-            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
 
         .close-modal {
             color: var(--text-muted);
             position: absolute;
-            right: 2rem;
-            top: 1.8rem;
-            font-size: 32px;
-            font-weight: 300;
+            right: 1.8rem;
+            top: 1.5rem;
+            font-size: 28px;
             cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .close-modal:hover {
-            color: var(--primary-purple);
         }
 
         .catalogue-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.8rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
 
         .category-card {
             border: 1px solid var(--border-color);
             border-radius: var(--radius-main);
-            padding: 1.5rem;
-            background: #fcf9fb;
+            padding: 1.2rem;
+            background: #fdf8fb;
         }
 
         .category-card h4 {
             color: var(--primary-purple);
             margin-top: 0;
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             border-bottom: 1px dashed var(--border-color);
-            padding-bottom: 0.6rem;
+            padding-bottom: 0.5rem;
         }
 
         .price-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 0.8rem 0;
-            font-size: 0.9rem;
+            margin: 0.7rem 0;
+            font-size: 0.85rem;
         }
 
         .price-item span:nth-child(2) {
@@ -474,12 +481,11 @@
             background-color: var(--light-pink-card);
             color: var(--primary-purple);
             border: none;
-            padding: 0.25rem 0.6rem;
+            padding: 0.2rem 0.5rem;
             border-radius: 6px;
             font-size: 0.75rem;
             font-weight: 600;
             cursor: pointer;
-            transition: var(--transition);
         }
 
         .btn-select-style:hover {
@@ -489,24 +495,24 @@
 
         /* Footer */
         footer {
-            background-color: var(--purple-deep);
+            background-color: var(--primary-purple);
             color: #ffffff;
-            padding: 5rem 2rem 2.5rem;
+            padding: 4rem 2rem 2rem;
         }
 
         .footer-content {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 3.5rem;
-            margin-bottom: 3.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
         }
 
         .footer-col h3 {
-            color: #f7e8ef;
+            color: #fce8f0;
             margin-top: 0;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .footer-col ul {
@@ -516,14 +522,13 @@
         }
 
         .footer-col ul li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
         }
 
         .footer-col ul li a {
             color: #e2c5d4;
             text-decoration: none;
-            font-size: 0.95rem;
-            transition: var(--transition);
+            font-size: 0.9rem;
             cursor: pointer;
         }
 
@@ -533,19 +538,21 @@
 
         .footer-col p {
             color: #e2c5d4;
-            font-size: 0.95rem;
-            margin: 0.5rem 0;
+            font-size: 0.9rem;
+            margin: 0.4rem 0;
         }
 
         .footer-bottom {
             text-align: center;
             border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 2rem;
-            font-size: 0.85rem;
+            padding-top: 1.5rem;
+            font-size: 0.8rem;
             color: #d1b3c2;
         }
 
         @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; padding: 3rem 5%; }
+            .hero-btns { justify-content: center; }
             .nav-links { 
                 display: none; 
                 flex-direction: column;
@@ -553,20 +560,12 @@
                 top: 100%;
                 left: 0;
                 width: 100%;
-                background: var(--card-bg);
+                background: #ffffff;
                 padding: 1.5rem 2rem;
                 box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-                border-bottom: 1px solid var(--border-color);
             }
-            .nav-links.active {
-                display: flex;
-            }
-            .menu-toggle {
-                display: block;
-            }
-            header h1 { font-size: 2.3rem; }
-            .booking-card { padding: 2rem; }
-            .modal-content { padding: 1.5rem; }
+            .nav-links.active { display: flex; }
+            .menu-toggle { display: block; }
         }
     </style>
 </head>
@@ -580,52 +579,84 @@
         </a>
         <button class="menu-toggle" onclick="toggleMobileMenu()">☰</button>
         <ul class="nav-links" id="navLinks">
-            <li><a onclick="openCatalogue(); toggleMobileMenu();">Prices Catalogue</a></li>
+            <li><a href="#services" onclick="toggleMobileMenu()">Services</a></li>
+            <li><a onclick="openCatalogue(); toggleMobileMenu();">Prices</a></li>
             <li><a href="#booking" onclick="toggleMobileMenu()">Book Appointment</a></li>
         </ul>
         <div class="nav-actions">
-            <a href="#booking" class="nav-btn">Book Now</a>
+            <a href="#booking" class="nav-btn">Book Appointment</a>
         </div>
     </nav>
 
     <!-- Hero Header Section -->
     <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Chychie Braids Logo">
+        <div class="hero-content">
+            <div class="welcome-subtitle">Welcome to Chychie Salon</div>
+            <h1>Healthy Hair. Beautiful You. Every Day.</h1>
+            <p>Professional braiding, hair treatment, styling, and hair washing services for modern women.</p>
+            <div class="hero-btns">
+                <a href="#booking" class="hero-btn-primary">Book Now</a>
+                <button class="hero-btn-secondary" onclick="openCatalogue()">Our Services & Prices</button>
+            </div>
         </div>
-        <div class="welcome-subtitle">Welcome to Chychie Beauty Salon</div>
-        <h1>Healthy Hair. Beautiful You. Every Day.</h1>
-        <p>Professional braiding, hair treatments, and exquisite styling services tailored for the modern woman.</p>
-        <div class="hero-btns">
-            <a href="#booking" class="hero-btn-primary">Book Appointment</a>
-            <button class="hero-btn-secondary" onclick="openCatalogue()">View Price Catalogue</button>
+        <div class="hero-image-container">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Hair Styling">
         </div>
     </header>
 
     <!-- Main Content Body -->
     <div class="main-container">
 
+        <!-- Services Preview Grid -->
+        <h2 id="services" class="section-title">Our Services & Prices</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Knotless Braids">
+                <h3>Knotless Braids</h3>
+                <p>Neat, lightweight, and painless braiding techniques for all lengths.</p>
+                <div class="price-tag">Mwk 15,000 - 23,000</div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80" alt="Mini Twists">
+                <h3>Mini Twists</h3>
+                <p>Nourishing treatment and stunning twists for healthy and strong hair.</p>
+                <div class="price-tag">Mwk 18,000 - 25,000</div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=600&q=80" alt="French Curls">
+                <h3>French Curls</h3>
+                <p>Professional high-end hair styling for any special event or daily look.</p>
+                <div class="price-tag">Mwk 18,000 - 23,000</div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80" alt="Hair Wash & Locs">
+                <h3>Hair Wash & Locs</h3>
+                <p>Deep cleansing, refreshing hair wash, and professional loc maintenance.</p>
+                <div class="price-tag">Mwk 8,000 - 30,000</div>
+            </div>
+        </div>
+
         <!-- Value Proposition Badges -->
         <div class="values-strip">
             <div class="value-box">
                 <span>💎</span>
-                <h4>Professional Staff</h4>
-                <p>Experienced braiders with precision & care.</p>
+                <h4>Professional</h4>
+                <p>Experienced staff with skill.</p>
             </div>
             <div class="value-box">
                 <span>🌿</span>
                 <h4>Quality Products</h4>
-                <p>We use premium hair and scalp care items.</p>
+                <p>We use high quality hair & beauty items.</p>
             </div>
             <div class="value-box">
-                <span>🏠</span>
-                <h4>Salon & Home Service</h4>
-                <p>Visit our studio or enjoy convenient mobile styling.</p>
+                <span>🛡️</span>
+                <h4>Clean & Safe</h4>
+                <p>Hygienic environment for our customers.</p>
             </div>
             <div class="value-box">
                 <span>⭐</span>
-                <h4>Client Satisfaction</h4>
-                <p>Your ultimate comfort and style is our priority.</p>
+                <h4>Satisfaction</h4>
+                <p>Your beauty is our happiness.</p>
             </div>
         </div>
 
@@ -678,7 +709,6 @@
                     <label><input type="radio" name="serviceType" value="Home Service" onclick="toggleHomeService(true)"> Home Service</label>
                 </div>
 
-                <!-- Conditional Home Service Location Field with GPS -->
                 <div id="homeServiceLocationGroup">
                     <label for="clientLocation">Physical Address / House No. or Map Pin:</label>
                     <input type="text" id="clientLocation" placeholder="e.g. Area 47, Sector 3, House No...">
@@ -708,23 +738,23 @@
     <div id="catalogueModal" class="modal">
         <div class="modal-content">
             <span class="close-modal" onclick="closeCatalogue()">&times;</span>
-            <div class="section-header" style="margin: 0 0 1.5rem 0; text-align: center;">
+            <div style="text-align: center;">
                 <h2>Style Price Catalogue</h2>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Tap 'Select' on any style to instantly add it to your booking form</p>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Tap 'Select' on any style to instantly add it to your booking form</p>
             </div>
             
             <div class="catalogue-grid">
                 <div class="category-card">
                     <h4>Knotless Braids / Twists</h4>
                     <p><strong>Small:</strong></p>
-                    <div class="price-item"><span>Waist length (Mwk 20,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Knotless Small Waist Length - Mwk 20,000')">Select</button></div>
-                    <div class="price-item"><span>Butt length (Mwk 23,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Knotless Small Butt Length - Mwk 23,000')">Select</button></div>
+                    <div class="price-item"><span>Waist (Mwk 20,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Knotless Small Waist Length - Mwk 20,000')">Select</button></div>
+                    <div class="price-item"><span>Butt (Mwk 23,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Knotless Small Butt Length - Mwk 23,000')">Select</button></div>
                     <p><strong>Medium:</strong></p>
-                    <div class="price-item"><span>Waist length (Mwk 18,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Knotless Medium Waist Length - Mwk 18,000')">Select</button></div>
-                    <div class="price-item"><span>Butt length (Mwk 20,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Knotless Medium Butt Length - Mwk 20,000')">Select</button></div>
+                    <div class="price-item"><span>Waist (Mwk 18,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Knotless Medium Waist Length - Mwk 18,000')">Select</button></div>
+                    <div class="price-item"><span>Butt (Mwk 20,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Knotless Medium Butt Length - Mwk 20,000')">Select</button></div>
                     <p><strong>Large:</strong></p>
-                    <div class="price-item"><span>Waist length (Mwk 15,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Knotless Large Waist Length - Mwk 15,000')">Select</button></div>
-                    <div class="price-item"><span>Butt length (Mwk 17,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Knotless Large Butt Length - Mwk 17,000')">Select</button></div>
+                    <div class="price-item"><span>Waist (Mwk 15,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Knotless Large Waist Length - Mwk 15,000')">Select</button></div>
+                    <div class="price-item"><span>Butt (Mwk 17,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Knotless Large Butt Length - Mwk 17,000')">Select</button></div>
                 </div>
 
                 <div class="category-card">
@@ -735,21 +765,16 @@
                     <p><strong>Mini Twists (Small):</strong></p>
                     <div class="price-item"><span>Short (Mwk 23,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Mini Twists Small Short - Mwk 23,000')">Select</button></div>
                     <div class="price-item"><span>Long (Mwk 25,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Mini Twists Small Long - Mwk 25,000')">Select</button></div>
-                    <p><strong>Mini Twists (Medium):</strong></p>
-                    <div class="price-item"><span>Short (Mwk 20,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Mini Twists Medium Short - Mwk 20,000')">Select</button></div>
-                    <div class="price-item"><span>Long (Mwk 22,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Mini Twists Medium Long - Mwk 22,000')">Select</button></div>
                 </div>
 
                 <div class="category-card">
                     <h4>French Curls & Locs</h4>
-                    <p><strong>French Curls (Small):</strong></p>
-                    <div class="price-item"><span>Short (Mwk 18,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('French Curls Small Short - Mwk 18,000')">Select</button></div>
-                    <div class="price-item"><span>Long (Mwk 23,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('French Curls Small Long - Mwk 23,000')">Select</button></div>
-                    <p><strong>French Curls (Medium):</strong></p>
-                    <div class="price-item"><span>Long (Mwk 18,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('French Curls Medium Long - Mwk 18,000')">Select</button></div>
+                    <p><strong>French Curls:</strong></p>
+                    <div class="price-item"><span>Small Short (Mwk 18,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('French Curls Small Short - Mwk 18,000')">Select</button></div>
+                    <div class="price-item"><span>Small Long (Mwk 23,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('French Curls Small Long - Mwk 23,000')">Select</button></div>
                     <p><strong>Locs:</strong></p>
                     <div class="price-item"><span>Installation (Mwk 25,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Locs Installation - Mwk 25,000')">Select</button></div>
-                    <div class="price-item"><span>Making/Mat. (Mwk 30,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Locs Making Your Material - Mwk 30,000')">Select</button></div>
+                    <div class="price-item"><span>Making (Mwk 30,000)</span><button type="button" class="btn-select-style" onclick="selectStyleAndBook('Locs Making Your Material - Mwk 30,000')">Select</button></div>
                 </div>
             </div>
         </div>
@@ -763,17 +788,14 @@
                 <p>Where confidence blossoms through immaculate hair styling and care.</p>
             </div>
             <div class="footer-col">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a onclick="openCatalogue()">Price Catalogue</a></li>
-                    <li><a href="#booking">Book Appointment</a></li>
-                </ul>
+                <h3>Opening Hours</h3>
+                <p>Mon - Sat: 8:00 AM - 6:00 PM</p>
+                <p>Sunday: Closed</p>
             </div>
             <div class="footer-col">
                 <h3>Contact Info</h3>
-                <p>📞 Phone/WhatsApp: 0995040542</p>
-                <p>📍 Location: Lilongwe, Malawi</p>
-                <p>🕒 Mon - Sat: 8:00 AM - 6:00 PM</p>
+                <p>📞 WhatsApp: 0995040542</p>
+                <p>📍 Lilongwe, Malawi</p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -782,35 +804,21 @@
     </footer>
 
     <script>
-        // Modal Controls
         const modal = document.getElementById('catalogueModal');
-        function openCatalogue() {
-            modal.style.display = "block";
-        }
-        function closeCatalogue() {
-            modal.style.display = "none";
-        }
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
+        function openCatalogue() { modal.style.display = "block"; }
+        function closeCatalogue() { modal.style.display = "none"; }
+        window.onclick = function(event) { if (event.target == modal) { modal.style.display = "none"; } }
 
-        // Mobile Menu Toggle
         function toggleMobileMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
+            document.getElementById('navLinks').classList.toggle('active');
         }
 
-        // Quick Select Style from Catalogue and Jump to Form
         function selectStyleAndBook(styleValue) {
-            const styleSelect = document.getElementById('selectedStyle');
-            styleSelect.value = styleValue;
+            document.getElementById('selectedStyle').value = styleValue;
             closeCatalogue();
             document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
         }
 
-        // Home Service toggle
         function toggleHomeService(isHome) {
             const locationGroup = document.getElementById('homeServiceLocationGroup');
             const locationInput = document.getElementById('clientLocation');
@@ -824,7 +832,6 @@
             }
         }
 
-        // Live Geolocation feature
         function getLocationPin() {
             const status = document.getElementById('locationStatus');
             const locationInput = document.getElementById('clientLocation');
@@ -839,17 +846,15 @@
                 (position) => {
                     const lat = position.coords.latitude;
                     const lon = position.coords.longitude;
-                    const mapsLink = `https://maps.google.com/?q=${lat},${lon}`;
-                    locationInput.value = mapsLink;
+                    locationInput.value = `https://maps.google.com/?q=${lat},${lon}`;
                     status.innerText = "✔ Live location captured successfully!";
                 },
                 () => {
-                    status.innerText = "Unable to retrieve your location. Please type your address.";
+                    status.innerText = "Unable to retrieve location. Please type address.";
                 }
             );
         }
 
-        // Handle Booking Form Submission and Redirect to WhatsApp
         function handleBooking(event) {
             event.preventDefault();
 
@@ -858,22 +863,33 @@
             const style = document.getElementById('selectedStyle').value;
             const serviceType = document.querySelector('input[name="serviceType"]:checked').value;
             const location = document.getElementById('clientLocation').value || 'At Salon';
-            const date = document.getElementById('appointmentDate').value;
+            const rawDate = document.getElementById('appointmentDate').value;
             const payment = document.getElementById('paymentMethod').value;
 
-            // Format message for WhatsApp
+            let formattedDate = rawDate;
+            if (rawDate) {
+                const dateObj = new Date(rawDate);
+                if (!isNaN(dateObj)) {
+                    formattedDate = dateObj.toLocaleString('en-GB', {
+                        day: 'numeric',
+                        month: 'short',
+                        year: 'numeric',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    });
+                }
+            }
+
             const message = `Hello Chychie Braids! I would like to book an appointment:%0A%0A` +
                             `👤 *Name:* ${encodeURIComponent(name)}%0A` +
                             `📞 *Phone:* ${encodeURIComponent(phone)}%0A` +
                             `💇‍♀️ *Style:* ${encodeURIComponent(style)}%0A` +
                             `🏠 *Service Type:* ${encodeURIComponent(serviceType)}%0A` +
-                            `📍 *Location/Address:* ${encodeURIComponent(location)}%0A` +
-                            `📅 *Date & Time:* ${encodeURIComponent(date)}%0A` +
+                            `📍 *Location:* ${encodeURIComponent(location)}%0A` +
+                            `📅 *Date & Time:* ${encodeURIComponent(formattedDate)}%0A` +
                             `💳 *Payment Option:* ${encodeURIComponent(payment)}`;
 
-            // Business WhatsApp Number (265995040542)
             const whatsappUrl = `https://wa.me/265995040542?text=${message}`;
-            
             window.open(whatsappUrl, '_blank');
         }
     </script>
